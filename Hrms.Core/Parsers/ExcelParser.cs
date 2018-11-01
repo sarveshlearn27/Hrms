@@ -19,8 +19,7 @@ namespace Hrms.Core
                 fileName = string.IsNullOrWhiteSpace(fileName) ? ConfigurationManager.AppSettings["AttendanceExcelFilePath"] : fileName;
                 if (!string.IsNullOrWhiteSpace(fileName))
                 {
-                    string conn = string.Empty;
-                    DataTable dtexcel = new DataTable(); 
+                    var attendanceInformation = DataReader.ReadExcel(fileName);
                 }
                 else
                 {
