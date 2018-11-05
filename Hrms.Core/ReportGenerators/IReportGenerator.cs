@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hrms.Core.DAL
+namespace Hrms.Core
 {
     interface IReportGenerator
     {
-        void WriteDataToRepository(List<Employee> allEmployeeInformation);
+        void WriteDataReport(List<Employee> allEmployeeInformation);
     }
 }

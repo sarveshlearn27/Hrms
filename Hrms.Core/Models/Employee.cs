@@ -10,19 +10,31 @@ namespace Hrms.Core
     {
         public string Name { get; set; }
 
+        public List<string> Status { get; set; }
+
         public List<DateTime> InTimings { get; set; }
 
         public List<DateTime> OutTimings { get; set; }
 
+        public List<string> Duration { get; set; }
+
+        public List<string> LateBy { get; set; }
+        public List<string> EarlyBy { get; set; }
+        public List<string> OT { get; set; }
+
+        public List<string> Shift { get; set; }
+
         public int LateMarks { get; set; }
 
-        public int TotalDeductions { get; set; }
+        public int TotalHalfDays { get; set; }
+
+        public float TotalDeductions { get; set; }
 
         public Employee()
         {
             if (LateMarks != 0)
             {
-                TotalDeductions = LateMarks / 4;
+                TotalHalfDays = LateMarks / 4;
             }
         }
     }
